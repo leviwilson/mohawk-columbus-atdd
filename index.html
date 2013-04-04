@@ -77,10 +77,33 @@
         <h2>Gems</h2>
         <div>
           <ol>
-            <li>testgen</li>
-            <li>RAutomation</li>
-            <li>mohawk</li>
-            <li>childprocess</li>
+            <li>testgen <em>- Generates our cucumber structure</em></li>
+            
+            <div class="fragment">
+              <li>RAutomation <em> - The low-level driver</em></li>
+              <pre style="width: auto;"><code>
+  window = RAutomation::Window.new(:title => /Our Title/)
+  text = window.text(:index => 0)
+  text.set 'The value'
+              </code></pre>
+            </div>
+            <div class="fragment">
+              <li>mohawk <em> - The page-object wrapper</em></li>
+              <pre style="width: auto;"><code>
+class MainScreen
+  include Mohawk
+  text(:name, :index => 0)
+end
+
+on(MainScreen).name = 'The value'
+              </code></pre>
+            </div>
+            <div class="fragment">
+              <li>childprocess <em> - Launches schtuff</em></li>
+              <pre style="width: auto;"><code>
+ChildProcess.build('notepad.exe', 'some_file.txt').start
+              </code></pre>
+            </div>
           </ol>
         </div>
         </section>
@@ -97,6 +120,39 @@
           <img src="http://blogs.phoenixnewtimes.com/valleyfever/lesko.jpg">
           <br>
         </div>
+        </section>
+        <section>
+        <h1>Dude</h2>
+        <ol>
+          <li class="fragment">Sweet</li>
+          <pre style="margin: 0; width: auto;" class="fragment"><code class="ruby">
+def some(thing)
+  puts "is #{:cool} and blardy blar blar"
+end
+          </code></pre>
+          <li class="fragment">Shit</li>
+          <li class="fragment">Sweet</li>
+          <pre style="margin: 0; width: auto;" class="fragment"><code class="ruby">
+def some(thing)
+  puts "is #{:cool} and blardy blar blar"
+end
+          </code></pre>
+          <li class="fragment">Shit</li>
+          <li class="fragment">Sweet</li>
+          <pre style="margin: 0; width: auto;" class="fragment"><code class="ruby">
+def some(thing)
+  puts "is #{:cool} and blardy blar blar"
+end
+          </code></pre>
+          <li class="fragment">Shit</li>
+          <li class="fragment">Sweet</li>
+          <pre style="margin: 0; width: auto;" class="fragment"><code class="ruby">
+def some(thing)
+  puts "is #{:cool} and blardy blar blar"
+end
+          </code></pre>
+          <li class="fragment">Shit</li>
+        </ol>
         </section>
       </div>
 
